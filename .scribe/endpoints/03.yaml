@@ -1,0 +1,403 @@
+name: Companies
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/companies
+    metadata:
+      title: 'List companies'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters: []
+    queryParameters:
+      sort:
+        name: sort
+        description: 'The sorting parameter (Order by DESC with the given column. Use "-" as prefix to order by ASC). Possible values: created_at, name.'
+        required: false
+        example: created_at
+        type: string
+        custom: []
+      perPage:
+        name: perPage
+        description: 'Items per page. Can be defined globally from the admin settings. Cannot be exceeded 100.'
+        required: false
+        example: 2
+        type: integer
+        custom: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"data":[{"id":586,"user_id":1294,"name":"D''Amore-Bednar","logo":"files\/eg\/1294\/0c575aa3727d5485dc87a7d0786b728c.png","description":"Sequi praesentium sunt excepturi quia quo voluptatum earum. Magni doloribus quisquam voluptates quisquam possimus et. Voluptas modi et velit ratione suscipit.","country_code":"EG","city_id":13647,"address":null,"phone":"4846131998","fax":"424-706-5902","email":"luz.leffler@wuckert.com","website":"http:\/\/fugit.com","facebook":null,"twitter":null,"linkedin":null,"pinterest":null,"logo_url":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/eg\/1294\/thumb-320x240-0c575aa3727d5485dc87a7d0786b728c.png","logo_url_small":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/eg\/1294\/thumb-120x90-0c575aa3727d5485dc87a7d0786b728c.png","logo_url_big":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/eg\/1294\/thumb-816x460-0c575aa3727d5485dc87a7d0786b728c.png","posts_count":0},{"id":456,"user_id":1392,"name":"Mills, Johnson And Dietrich","logo":"files\/bd\/1392\/aa41b61b8291429e397918368a534c87.png","description":"Maxime sed id voluptate minima. Voluptates id quod nihil ut nobis sit laudantium. Hic eum deserunt aperiam possimus. Facere asperiores exercitationem dolorum dolores consequatur aperiam eos.","country_code":"BD","city_id":2633,"address":null,"phone":"14144097249","fax":"331-973-1539","email":"amy66@towne.com","website":"http:\/\/non.com","facebook":null,"twitter":null,"linkedin":null,"pinterest":null,"logo_url":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/bd\/1392\/thumb-320x240-aa41b61b8291429e397918368a534c87.png","logo_url_small":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/bd\/1392\/thumb-120x90-aa41b61b8291429e397918368a534c87.png","logo_url_big":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/bd\/1392\/thumb-816x460-aa41b61b8291429e397918368a534c87.png","posts_count":0}],"links":{"first":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=1","last":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=349","prev":null,"next":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=2"},"meta":{"current_page":1,"from":1,"last_page":349,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=1","label":"1","active":true},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=2","label":"2","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=3","label":"3","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=4","label":"4","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=5","label":"5","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=6","label":"6","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=7","label":"7","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=8","label":"8","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=9","label":"9","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=10","label":"10","active":false},{"url":null,"label":"...","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=348","label":"348","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=349","label":"349","active":false},{"url":"https:\/\/jobclass.laraclassifier.local\/api\/companies?page=2","label":"Next &raquo;","active":false}],"path":"https:\/\/jobclass.laraclassifier.local\/api\/companies","per_page":2,"to":2,"total":697}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/companies/{id}'
+    metadata:
+      title: 'Get company'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: 'The company''s ID.'
+        required: true
+        example: 44
+        type: integer
+        custom: []
+    queryParameters:
+      embed:
+        name: embed
+        description: 'The Comma-separated list of the company relationships for Eager Loading - Possible values: user.'
+        required: false
+        example: user
+        type: string
+        custom: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"id":44,"user_id":2,"name":"Stroman-Ryan","logo":"files\/us\/2\/e3cad512e2d24c346558ff2c8bc24739.png","description":"Doloribus ea voluptas quisquam. Perferendis quia ad odio ab nostrum. Autem odit blanditiis vitae eos. Iure architecto quod fuga debitis a repellat.","country_code":"US","city_id":46419,"address":null,"phone":"+15858120934","fax":"1-520-982-1706","email":"hassan.douglas@example.org","website":"http:\/\/qui.com","facebook":null,"twitter":null,"linkedin":null,"pinterest":null,"user":{"id":2,"name":"Admin Demo","username":null,"updated_at":"2022-02-26T04:56:59.000000Z","original_updated_at":"2022-02-26 04:56:59","original_last_activity":null,"created_at_formatted":"Feb 26th, 2022 at 05:56","photo_url":"https:\/\/jobclass.laraclassifier.local\/storage\/app\/default\/user.png","p_is_online":false},"logo_url":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/us\/2\/thumb-320x240-e3cad512e2d24c346558ff2c8bc24739.png","logo_url_small":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/us\/2\/thumb-120x90-e3cad512e2d24c346558ff2c8bc24739.png","logo_url_big":"https:\/\/jobclass.laraclassifier.local\/storage\/files\/us\/2\/thumb-816x460-e3cad512e2d24c346558ff2c8bc24739.png","posts_count":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/companies
+    metadata:
+      title: 'Store company'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      company:
+        name: company
+        description: ''
+        required: false
+        example: []
+        type: object
+        custom: []
+      company.name:
+        name: company.name
+        description: ''
+        required: true
+        example: minus
+        type: string
+        custom: []
+      company.description:
+        name: company.description
+        description: ''
+        required: true
+        example: pariatur
+        type: string
+        custom: []
+      'company[].country_code':
+        name: 'company[].country_code'
+        description: 'The code of the company''s country.'
+        required: true
+        example: US
+        type: string
+        custom: []
+      'company[].name':
+        name: 'company[].name'
+        description: 'The company''s name.'
+        required: true
+        example: 'Foo Inc'
+        type: string
+        custom: []
+      'company[].logo':
+        name: 'company[].logo'
+        description: 'The company''s logo.'
+        required: false
+        example: null
+        type: file
+        custom: []
+      'company[].description':
+        name: 'company[].description'
+        description: 'The company''s description.'
+        required: true
+        example: 'Nostrum quia est aut quas. Consequuntur ut quis odit voluptatem laborum quia.'
+        type: string
+        custom: []
+      'company[].city_id':
+        name: 'company[].city_id'
+        description: 'The company city''s ID.'
+        required: false
+        example: 20
+        type: integer
+        custom: []
+      'company[].address':
+        name: 'company[].address'
+        description: 'The company''s address.'
+        required: false
+        example: '5 rue de l''Echelle'
+        type: string
+        custom: []
+      'company[].phone':
+        name: 'company[].phone'
+        description: 'The company''s phone number.'
+        required: false
+        example: '+17656766467'
+        type: string
+        custom: []
+      'company[].fax':
+        name: 'company[].fax'
+        description: 'The company''s fax number.'
+        required: false
+        example: '+80159266712'
+        type: string
+        custom: []
+      'company[].email':
+        name: 'company[].email'
+        description: 'The company''s email address.'
+        required: false
+        example: contact@domain.tld
+        type: string
+        custom: []
+      'company[].website':
+        name: 'company[].website'
+        description: 'The company''s website URL.'
+        required: false
+        example: 'https://domain.tld'
+        type: string
+        custom: []
+      'company[].facebook':
+        name: 'company[].facebook'
+        description: 'The company''s Facebook URL.'
+        required: false
+        example: ea
+        type: string
+        custom: []
+      'company[].twitter':
+        name: 'company[].twitter'
+        description: 'The company''s Twitter URL.'
+        required: false
+        example: temporibus
+        type: string
+        custom: []
+      'company[].linkedin':
+        name: 'company[].linkedin'
+        description: 'The company''s LinkedIn URL.'
+        required: false
+        example: praesentium
+        type: string
+        custom: []
+      'company[].pinterest':
+        name: 'company[].pinterest'
+        description: 'The company''s Pinterest URL.'
+        required: false
+        example: quod
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/companies/{id}'
+    metadata:
+      title: 'Update company'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: 'The company''s ID.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters:
+      company:
+        name: company
+        description: ''
+        required: false
+        example: []
+        type: object
+        custom: []
+      company.name:
+        name: company.name
+        description: ''
+        required: true
+        example: totam
+        type: string
+        custom: []
+      company.description:
+        name: company.description
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      'company[].country_code':
+        name: 'company[].country_code'
+        description: 'The code of the company''s country.'
+        required: true
+        example: US
+        type: string
+        custom: []
+      'company[].name':
+        name: 'company[].name'
+        description: 'The company''s name.'
+        required: true
+        example: 'Foo Inc'
+        type: string
+        custom: []
+      'company[].logo':
+        name: 'company[].logo'
+        description: 'The company''s logo.'
+        required: false
+        example: null
+        type: file
+        custom: []
+      'company[].description':
+        name: 'company[].description'
+        description: 'The company''s description.'
+        required: true
+        example: 'Nostrum quia est aut quas. Consequuntur ut quis odit voluptatem laborum quia.'
+        type: string
+        custom: []
+      'company[].city_id':
+        name: 'company[].city_id'
+        description: 'The company city''s ID.'
+        required: false
+        example: 6
+        type: integer
+        custom: []
+      'company[].address':
+        name: 'company[].address'
+        description: 'The company''s address.'
+        required: false
+        example: '5 rue de l''Echelle'
+        type: string
+        custom: []
+      'company[].phone':
+        name: 'company[].phone'
+        description: 'The company''s phone number.'
+        required: false
+        example: '+17656766467'
+        type: string
+        custom: []
+      'company[].fax':
+        name: 'company[].fax'
+        description: 'The company''s fax number.'
+        required: false
+        example: '+80159266712'
+        type: string
+        custom: []
+      'company[].email':
+        name: 'company[].email'
+        description: 'The company''s email address.'
+        required: false
+        example: contact@domain.tld
+        type: string
+        custom: []
+      'company[].website':
+        name: 'company[].website'
+        description: 'The company''s website URL.'
+        required: false
+        example: 'https://domain.tld'
+        type: string
+        custom: []
+      'company[].facebook':
+        name: 'company[].facebook'
+        description: 'The company''s Facebook URL.'
+        required: false
+        example: illum
+        type: string
+        custom: []
+      'company[].twitter':
+        name: 'company[].twitter'
+        description: 'The company''s Twitter URL.'
+        required: false
+        example: non
+        type: string
+        custom: []
+      'company[].linkedin':
+        name: 'company[].linkedin'
+        description: 'The company''s LinkedIn URL.'
+        required: false
+        example: vel
+        type: string
+        custom: []
+      'company[].pinterest':
+        name: 'company[].pinterest'
+        description: 'The company''s Pinterest URL.'
+        required: false
+        example: quis
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/companies/{ids}'
+    metadata:
+      title: 'Delete company(ies)'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: a25ydDlKdDRwT2wzYjAxV1hvc0hSUmQxYklTTE1pRHU=
+      X-AppType: docs
+    urlParameters:
+      ids:
+        name: ids
+        description: 'The ID or comma-separated IDs list of company(ies).'
+        required: true
+        example: libero
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
